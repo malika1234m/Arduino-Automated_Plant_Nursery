@@ -7,11 +7,9 @@
 
 #define TRIGGER_PIN  D5
 #define ECHO_PIN     D3
-// You should get Auth Token in the Blynk App.
-// Go to the Project Settings (nut icon).
+
 char auth[] = "114e3cc9183243d7ac49c82a70e57d23"; //Enter the Auth code which was send by Blink
 
-// Your WiFi credentials.
 // Set password to "" for open networks.
 char ssid[] = "Dialog 4G New";  //Enter your WIFI Name
 char pass[] = "budusaranai";  //Enter your WIFI Password
@@ -39,7 +37,7 @@ void sendSensor()
     Serial.println("Failed to read from DHT sensor!");
     return;
   }
-  // You can send any value at any time.
+
   // Please don't send more that 10 values per second.
   Blynk.virtualWrite(V5, h);  //V5 is for Humidity
   Blynk.virtualWrite(V6, t);  //V6 is for Temperature
